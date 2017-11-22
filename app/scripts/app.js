@@ -8,23 +8,17 @@
  *
  * Main module of the application.
  */
-angular
-  .module('angularContactListAppApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
+angular.module('angularContactListAppApp', [
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'angularContactListAppApp.createEditContact',
+    'angularContactListAppApp.home',
+    'angularContactListAppApp.show',
+    'angularContactListAppApp.delete',
+    'firebase',
+    'angularContactListAppApp.firebase'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+  $locationProvider.hashPrefix('!');
+
+  $routeProvider.otherwise({redirectTo: '/'});
+}]);

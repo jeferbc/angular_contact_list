@@ -1,0 +1,22 @@
+<div class="container show-contact">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <header>
+        <h1>{{ contact.name }}</h1>
+      </header>
+      <div class="contact-info">
+        <p><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> {{ contact.mobile }}&nbsp&nbsp&nbsp</p>
+        <p><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> {{ contact.email }}</p>
+      </div>
+      <h4><strong>Notes:</strong></h4>
+      <p>{{ contact.notes }}</p>
+      <div class="buttons">
+        <a href="/#!/">Back</a>
+        <div class="actions">
+          <a href="#!/contacts/edit/{{ contact.id }}"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i> Edit&nbsp&nbsp&nbsp</a>
+          <a href="#!/delete/{{ contact.id }}"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i> Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

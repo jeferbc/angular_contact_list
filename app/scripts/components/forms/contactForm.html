@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Contact</h1>
+      <form name="contactForm" ng-submit="createEditContact()">
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter name" ng-model="contact.name" required>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input type="email" ng-model="contact.email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="inputMobile">Mobile</label>
+          <input type="tel" ng-model="contact.mobile" class="form-control" id="mobile" placeholder="Enter mobile number" required>
+        </div>
+        <div class="form-group">
+          <label for="inputNotes">Notes</label>
+          <textarea ng-model="contact.notes" class="form-control" id="notes" placeholder="Enter notes ..."></textarea>
+        </div>
+        <div class="float-right">
+          <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
